@@ -10,6 +10,9 @@ body{
     margin: 0px;
     font-family: 'Ubuntu', sans-serif;
 }
+input, textarea {
+    font-family: sans-serif;
+}
 .barra_superior{
     border-bottom: 1px solid rgb(204,204,204);
     color: rgb(187,187,187);
@@ -212,13 +215,21 @@ section{
     background-color: rgba(255, 0, 0, 0.801);
     color: white;
 }
-input.nao_valido{
-    border-bottom: 1px solid red !important;
-    color: red;
-}
+
 span.nao_valido{
     color: red;
     display: none;
+}
+input.nao_valido, textarea.nao_valido{
+    color: red !important;
+    border-bottom: 1px solid red !important;
+}
+
+.texto{
+    color: gray;
+    float: right;
+    font-size: 12px;
+    line-height: 14px;
 }
 
 

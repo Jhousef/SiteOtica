@@ -57,10 +57,54 @@ function validarFormModal(evt) {
 /* Validação Fale Conosco */
 if (document.forms["form_contato"] != undefined) {
     var form = document.forms["form_contato"];
+
+    form.addEventListener("submit", function (evt) {
+        var formValido = true
+
+        if (!naoVazio(form.nome_Completo.value)) {
+            form.nome_Completo.className = "nao_valido"
+            formValido = false
+        }
+        if (!naoVazio(form.telefone.value)) {
+            form.telefone.className = "nao_valido"
+            formValido = false
+        }
+        if (!naoVazio(form.mensagem.value)) {
+            form.mensagem.className = "nao_valido"
+            formValido = false
+        }
+        if (!validarEmail(form.email.value)) {
+            form.email.className = "nao_valido"
+            formValido = false
+        }
+        if (!formValido == true) {
+            evt.preventDefault();
+        }
+    });
+
+    var inputs = document.querySelectorAll("form[name = form_contato] input[type=text]")
+
+    for (var i = 0; i < inputs.length; i++) {
+        inputs[i].addEventListener(
+            "keypress", function () {
+                this.className = ""
+            }
+        )
+    }
+
+    var textarea = document.querySelector("form[name = form_contato] textarea")
+    textarea.addEventListener(
+        "keyup", function () {
+            this.className = "";
+            document.querySelector(".texto").innerHTML = "Caractere(s)" + this.value.length
+        }
+
+    )
+
 }
 
 /* Funções */
-function validarEmail(email) {
+function validarEmail(valorEmail) {
     if (
         valorEmail != "" &&
         valorEmail.indexOf("@") > 3 &&
@@ -69,5 +113,12 @@ function validarEmail(email) {
     } else {
         return false
     }
+}
 
+function naoVazio(texto) {
+    if (texto.trim().length > 0) {
+        return true
+    } else {
+        return false
+    }
 }
