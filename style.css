@@ -258,7 +258,7 @@ input.nao_valido, textarea.nao_valido{
     }
     nav{
         float: none;
-        margin-left: -px;
+        margin-left: -2px;
         font-size: 16px;
     }
     nav .btn_destaque{
