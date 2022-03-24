@@ -6,6 +6,11 @@
 .clearfix{
     clear: both;
 }
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 body{
     margin: 0px;
     font-family: 'Ubuntu', sans-serif;
@@ -261,18 +266,68 @@ input.nao_valido, textarea.nao_valido{
         margin-left: 0px;
         font-size: 16px;
     }
+
+    /* ------ Página inicial ------ */
+    .sec01{
+        margin-top: 24px;
+    }
+    .sec01 .titulo{
+        margin-left: 0px;
+    }
+    .sec01 p#arm{
+        margin-top: 50px;
+    }
+    .sec01 .container .btn_destaque{
+        margin-top: 100px;
+    }
+    .sec03 .container .btn_destaque{
+        width: 100%;
+        margin-right: 20px;
+    }
+    /* ------ Fale Conosco ------ */
+    .metade{
+        width: 100%;
+    }
+    a.btn_destaque{
+        width: 100%;
+        float: right;
+        border-radius: 8px;
+        text-align: center;
+        
+    }
+    
+    span.texto {
+        float: none;
+        text-align: center;
+    }
+    .sec_fale input[type=submit]{
+        float: none;
+        width: 100%;
+        margin-top: 20px;
+        border-radius: 8px;
+        padding: 12px;
+    }
+    /* ------ Onde Estamos ------ */
+    .sec_onde .metade{
+        background-color: #FAFAFA;
+        padding-bottom: 10px;
+    }
+
+    /* ---------- ----------- */
+
     .pos_modal{
         width: 100%;
     }
     .modal{
-        width: 350px;
+        width: 400px;
+        height: 190px;
         padding-left: 30px;
     }
     .pos_modal .modal .fechar{
         background-color: rgba(255, 29, 29, 0.89) !important;
         color: white;
         padding: 3px 5px;
-        border-radius: 2px;
+        border-radius: 1px;
     }
     .pos_modal .modal .fechar:hover{
         background-color: rgb(252, 0, 0) !important;
