@@ -9,6 +9,7 @@
 *{
     padding: 0;
     margin: 0;
+    border: 0;
     box-sizing: border-box;
 }
 body{
@@ -256,7 +257,7 @@ input.nao_valido, textarea.nao_valido{
 
 @media screen and (max-width: 480px){
     .barra_superior .container{
-        margin-left: 10px;
+        margin-left: 0px;
     }
     .logo{
         width: 100%;
@@ -280,11 +281,15 @@ input.nao_valido, textarea.nao_valido{
     .sec01 .container .btn_destaque{
         margin-top: 100px;
     }
+    .sec03 .container{
+        
+    }
     .sec03 .container .btn_destaque{
         width: 100%;
-        margin-right: 20px;
+        
     }
     /* ------ Fale Conosco ------ */
+    
     .metade{
         width: 100%;
     }
@@ -295,7 +300,6 @@ input.nao_valido, textarea.nao_valido{
         text-align: center;
         
     }
-    
     span.texto {
         float: none;
         text-align: center;
@@ -304,8 +308,10 @@ input.nao_valido, textarea.nao_valido{
         float: none;
         width: 100%;
         margin-top: 20px;
+        margin-right: 0px;
         border-radius: 8px;
-        padding: 12px;
+        padding: 24px 30px;
+        text-align: center;
     }
     /* ------ Onde Estamos ------ */
     .sec_onde .metade{
@@ -349,7 +355,7 @@ input.nao_valido, textarea.nao_valido{
     }
     .sec03 .largura40{
         width: 100%;
-        margin-left: 20px;
+        
         height: 400px;
     }
     .sec03 .largura60.home2{
